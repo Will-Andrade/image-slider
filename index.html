@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Image Slider</title>
+</head>
+<body>
+    <div class="slider">
+        <div data-js="slider-item" class="slider-item slider-item__visible">
+            <img src="img/landscapeOne.jpg" alt="A sunset over the ocean" />
+        </div>
+        <div data-js="slider-item" class="slider-item">
+            <img src="img/landscapeTwo.jpg" alt="Icy and foggy trees" />
+        </div>
+        <div data-js="slider-item" class="slider-item">
+            <img src="img/landscapeThree.jpg" alt="Aurora Borealis over the ice mountains" />
+        </div>
+        <div data-js="slider-item" class="slider-item">
+            <img src="img/landscapeFour.jpg" alt="Deep forest setting" />
+        </div>
+        <div data-js="slider-item" class="slider-item">
+            <img src="img/landscapeFive.jpg" alt="Palm trees high in the mountain" />
+        </div>
+
+        <div class="slider-actions">
+            <button data-js="slider-btn-prev" type="button" aria-label="Slide anterior">
+                <
+            </button>
+            <button data-js="slider-btn-next" type="button" aria-label="Próximo slide">
+                >
+            </button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
