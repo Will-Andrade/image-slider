@@ -4,15 +4,17 @@ const nextSlideBtn = document.querySelector('[data-js="slider-btn-next"]');
 
 let sliderIndex = 0;
 
-prevSlideBtn.addEventListener('click', () => {
+const prevSlideClickHandler = () => {
     sliderImgs[sliderIndex].classList.remove('slider-item__visible');
-    sliderIndex === 0 ? sliderIndex = sliderImgs.length - 1 : sliderIndex--;
-    sliderImgs[sliderIndex].classList.add('slider-item__visible');
-});
+    const correctIndex = sliderIndex === 0 ? sliderIndex = sliderImgs.length - 1 : --sliderIndex;
+    sliderImgs[correctIndex].classList.add('slider-item__visible');
+};
 
-nextSlideBtn.addEventListener('click', () => {
+const nextSlideClickHandler = () => {
     sliderImgs[sliderIndex].classList.remove('slider-item__visible');
-    sliderIndex === sliderImgs.length - 1 ? sliderIndex = 0 : sliderIndex++;
+    sliderIndex === sliderImgs.length - 1 ? sliderIndex = 0 : ++sliderIndex;
     sliderImgs[sliderIndex].classList.add('slider-item__visible');
+}
 
-});
+prevSlideBtn.addEventListener('click', prevSlideClickHandler);
+nextSlideBtn.addEventListener('click', nextSlideClickHandler);
